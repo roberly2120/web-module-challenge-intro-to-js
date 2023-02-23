@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 21
+if (votingAge >= 18){
+  console.log(true);
+}
+else {
+  console.log(false);
+}
 
 
 /*
@@ -34,10 +40,15 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
-
+let firstThing = 34
+const secondThing = 12
+if (firstThing > secondThing){
+  firstThing = firstThing - secondThing;
+}
+else {
+  firstThing = firstThing
+}
+console.log(firstThing);
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
 
@@ -49,7 +60,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let yearValue = "1999";
+console.log(Number(yearValue));
 
 
 /*
@@ -64,6 +76,7 @@ Do the following:
 function multiply(num1, num2){
   return num1 * num2;
 }
+multiply(2, 9)
 
 
 
@@ -77,10 +90,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears * 7;
 }
-
+dogYears();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,9 +142,36 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+  if (dogAge >= 1) {
+    if (dogWeight<= 5){
+      return dogWeight * .05;
+    }
+    else if ((dogWeight >= 6) && (dogWeight <= 10)){
+        return dogWeight * .04;
+      }
+    else if ((dogWeight >= 11) && (dogWeight <= 15)){
+        return dogWeight * .03;
+    }  
+    else if (dogWeight > 15){
+      return dogWeight * .02;
+    }
+  }
+  else if (dogAge <1) {
+   if ((dogAge >= 0.167) && (dogAge < 0.333)){
+    return dogWeight * 0.1;
+  }
+  else if ((dogAge >= 0.333 ) && (dogAge < 0.583)){
+    return dogWeight * .05;
+  }
+  else if ((dogAge >= 0.583) && (dogAge < 1)){
+    return dogWeight * .04;
+  }
 }
+}
+hungryDog();
+console.log(hungryDog(20, .2));
+
 
 
 
